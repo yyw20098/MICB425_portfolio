@@ -1,0 +1,52 @@
+---
+title: 'Assignment #4'
+author: "YiWei Yang (18422148)"
+date: '2018-02-16'
+output: html_document
+---
+Exercise #1
+```{r}
+library(tidyverse)
+#Load data
+Tiffany=read.table("Saanich.metadata.txt", header=TRUE, row.names = 1, sep = "\t", na.strings = c("NAN","NA","."))
+
+ggplot(Tiffany, aes(x=PO4_uM, y=Depth_m)) +
+  geom_point(color="purple", shape=17)
+```
+
+Exercise #2
+```{r}
+Tiffany %>% 
+  mutate(Temperature_F = Temperature_C*33.8) %>% 
+ggplot() + geom_point(aes(x=Temperature_F, y=Depth_m))
+```
+
+Exercise #3
+```{r}
+source("https://bioconductor.org/biocLite.R")
+biocLite("phyloseq")
+library(phyloseq)
+load("phyloseq_object.RData")
+physeq_percent = transform_sample_counts(physeq, function(x) 100 * x/sum(x))
+plot_bar(physeq_percent, fill="Class") + 
+  geom_bar(aes(fill=Class), stat="identity")+
+  labs( x="Sample depth", y="Percent relative abundance",title ="Class from 10 to 200 m in Saanich Inlet")
+
+
+```
+
+
+
+Exercise #4
+```{r}
+Tiffany %>% 
+  gather(key="Nutrients",value="uM",2:6,8) %>% 
+
+ggplot(aes(x=Depth_m,y=uM))+
+geom_point()+
+facet_wrap(~Nutrients, scales="free_y")+
+geom_line()   
+```
+
+
+

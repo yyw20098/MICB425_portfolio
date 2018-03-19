@@ -1,0 +1,323 @@
+---
+title: "Module 3"
+author: "YiWei Yang (18422148)"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: html_document
+---
+
+
+---
+title: "Problem Set_04"
+author: "YiWei Yang (18422148)"
+date: "version `r format(Sys.time(), '%B %d, %Y')`"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+### Problem set_04 “Fine-scale phylogenetic architecture”
+#### Learning objectives: 
+
+* Gain experience estimating diversity within a hypothetical microbial community
+
+
+#### Outline:
+
+In class Day 1:
+
+1. Define and describe species within your group's "microbial" community.
+2. Count and record individuals within your defined species groups.
+3. Remix all species together to reform the original community.
+4. Each person in your group takes a random sample of the community (*i.e.* devide up the candy).
+
+Assignment:
+
+5. Individually, complete a collection curve for your sample.
+6. Calculate alpha-diversity based on your original total community and your individual sample.
+
+In class Day 2:
+
+7. Compare diversity between groups.
+
+#### Part 1: Description and enumeration
+1. Construct a table listing each species, its distinguishing characteristics, the name you have given it, and the number of occurrences of the species in the collection.
+```{r}
+#To make tables
+library(kableExtra)
+library(knitr)
+#To manipulate and plot data
+library(tidyverse)
+
+example_data3=data.frame(
+  number = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48),
+  name = c("RIGOA", "RIGOA", "RIGOA","RIGOA","RIGOA","Skittles","Skittles","Skittles","Skittles","Skittles","M&M","M&M","M&M","M&M","M&M","M&M","Mikes & Ike's","Mikes & Ike's","Mikes & Ike's","Mikes & Ike's","Mikes & Ike's","Gummy Bears","Gummy Bears","Gummy Bears","Gummy Bears","Gummy Bears","Gummy Bears","LEGO","LEGO","LEGO","LEGO","LEGO","LEGO","LEGO","Gumdrops","Gumdrops","Gumdrops","Gumdrops","Gumdrops","Fruit shaped gummies (gold)","MACROPHAGE","COKE BOTTLES","BLUE WHITE DROP","RED WHITE DROP","WATERMELON","RED GREEN FISH","KISSES","RED SNAKES"),
+  characteristics = c("Maroon", "Yellow", "Translucent","Orange","Brown","Brown","Yellow","Red","Orange","Green","Brown","Red","Green","Blue","Orange","Yellow","Yellow","Pink","Red","Green","Orange","Pink","Red","Green","Orange","Yellow","Translucent yellow","Blue square","Blue rectangle","Green rectangle","Yellow square","Yellow rectangle","Pink square","Pink rectangle","Brownish purple","Red","Green","Orange","Yellow","Fruit shaped gummies (gold)","MACROPHAGE","COKE BOTTLES","BLUE WHITE DROP","RED WHITE DROP","WATERMELON","RED GREEN FISH","KISSES","RED SNAKES"),
+  occurences = c(2,1,2,1,1,37,35,43,37,45,30,28,24,39,65,32,45,44,41,39,30,17,11,17,15,17,14,1,3,2,1,4,1,6,3,7,5,5,4,2,6,3,2,1,1,1,16,13)
+)
+
+example_data3 %>% 
+  kable("html") %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10, full_width = F)
+
+
+
+```
+
+2. Ask yourself if your collection of microbial cells from seawater represents the actual diversity of microorganisms inhabiting waters along the Line-P transect. Were the majority of different species sampled or were many missed? 
+
+No, my sample of microbial cells do not represent the actual diversity of microorganisms for the entire community inhabiting waters along the Line-P transect. Majority of different species were sampled, but some were missed and the proportional of different species does not accurately represent the original proportional of species in the original community
+ 
+#### Part 2: Collector's curve
+
+For your sample:
+
+* Create a collector's curve for your sample (not the entire original community).
+
+
+
+```{r}
+example_data2 = data.frame(
+  x = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196),
+  y = c(1,2,3,4,4,5,5,5,6,6,6,6,7,7,8,8,8,9,9,9,9,10,10,10,10,10,10,10,11,11,11,11,12,12,12,12,12,12,13,13,13,13,13,13,13,13,14,14,14,14,14,14,14,14,14,14,15,15,15,15,15,15,15,16,16,16,16,16,16,16,16,16,16,17,17,17,17,17,17,17,17,19,19,19,19,19,19,19,19,19,19,19,20,20,20,20,20,20,20,20,20,20,20,20,21,21,21,21,21,21,21,21,21,22,22,22,22,22,22,22,22,22,22,22,22,22,23,23,23,23,23,23,23,23,23,23,23,24,24,24,24,24,24,24,24,24,24,24,24,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27)
+)
+
+ggplot(example_data2, aes(x=x, y=y)) +
+  geom_point() +
+  geom_smooth() +
+  labs(x="Cumulative number of individuals classified", y="Cumulative number of species observed")
+```
+
+* Does the curve flatten out? If so, after how many individual cells have been collected?
+
+Yes, the curve starts flattening out after around 50 individuals being collected. 
+
+* What can you conclude from the shape of your collector’s curve as to your depth of sampling?
+
+We can clearly observed a relationship that decreasing number of species that are observed as increasing cumulative number of individuals classified. The deeper the sampling (increasing cumulative number of species observed), the flatter the curve has gotten. 
+
+
+
+
+#### Part 3: Diversity estimates (alpha diversity)
+Using the table from Part 1, calculate species diversity using the following indices or metrics.
+
+##### Diversity: Simpson Reciprocal Index
+
+$\frac{1}{D}$ where $D = \sum p_i^2$
+
+$p_i$ = the fractional abundance of the $i^{th}$ species
+
+For example, using the example data 1 with 3 species with 2, 4, and 1 individuals each, D =
+
+```{r}
+species1 = 2/(2+4+1)
+species2 = 4/(2+4+1)
+species3 = 1/(2+4+1)
+
+1 / (species1^2 + species2^2 + species3^2)
+```
+
+
+* What is the Simpson Reciprocal Index for your sample?
+
+```{r}
+D=
+BigBallsGreen = 1/196
+BigBallsBrown  = 1/196
+BigBallsYellow = 1/196
+MMBrown=15/196
+MMRed=8/196
+MMGreen=9/196
+MMBlue=2/196
+MMOrange=17/196
+MMYellow=8/196
+SkittlesBrown=9/196
+SkittlesRed=10/196
+SkittlesGreen=12/196
+SkittlesBlue=10/196
+SkittlesOrange=7/196
+SkittlesYellow=7/196
+MikesIkeYellow=10/196
+MikesIkeRed=4/196
+MikesIkeGreen=14/196
+MikesIkeOrange=12/196
+GummyBearsRed=9/196
+GummyBearsYellow=10/196
+GummyBearsGreen=7/196
+BricksPink=2/196
+BricksYellow=3/196
+HersheyKiss=2/196
+RedSnakes=1/196
+Chocolate=5/196
+
+1 / (BigBallsGreen^2 + BigBallsBrown^2 + BigBallsYellow^2+BricksPink^2+BricksYellow^2+Chocolate^2+GummyBearsGreen^2+GummyBearsRed^2+GummyBearsYellow^2+HersheyKiss^2+MikesIkeGreen^2+MikesIkeOrange^2+MikesIkeRed^2+MikesIkeYellow^2+MMBlue^2+MMBrown^2+MMGreen^2+MMOrange^2+MMRed^2+MMYellow^2+RedSnakes^2+SkittlesBlue^2+SkittlesBrown^2+SkittlesGreen^2+SkittlesOrange^2+SkittlesRed^2+SkittlesYellow^2)
+
+```
+
+* What is the Simpson Reciprocal Index for your original total community?
+
+```{r}
+RIGOAMaroon=2/799
+RIGOAYellow=1/799
+RIGOTranslucent=2/799
+RIGOAOrange=1/799
+RIGOABrown=1/799
+SkittlesBrown2=37/799
+SkittlesYellow2=35/799
+SkittlesRed2=43/799
+SkittlesOrange2=37/799
+SkittlesGreen2=45/799
+MMBrown=30/799
+MMRed=28/799
+MMGreen=24/799
+MMBlue=39/799
+MMOrange2=65/799
+MMYellow=32/799
+MIYellow=45/799
+MIPik=44/799
+MIRed=41/799
+MIGreen=39/799
+MIOrange=30/799
+GBPink=17/799
+GBRed=11/799
+GBGreen=17/799
+GBOrange=15/799
+GBYellow=17/799
+GBTranslucentYellow=14/799
+LEGOBlueSquare=1/799
+LEGOBlueRectangle=3/799
+LEGOGreenRectangle=2/799
+LEGOYellowSquare=1/799
+LEGOYellowRectangle=4/799
+LEGOPinkSquare=1/799
+LEGOPinkRectange=6/799
+GumdropBrownishPurple=3/799
+GumdropsRed=7/799
+GumdropsGreen=5/799
+GumdropsOrange=5/799
+GumdropsYellow=4/799
+FruitShapeGumies=2/799
+Macrophage=6/799
+CokeBottle=3/799
+BlueWhiteDrop=2/799
+RedWhiteDrop=1/799
+Watermelon=1/799
+RedGreenFish=1/799
+Kisses=16/799
+RedSnakes=13/799
+
+1/(RedSnakes^2+Kisses^2+RedGreenFish^2+Watermelon^2+RedWhiteDrop^2+BlueWhiteDrop^2+CokeBottle^2+Macrophage^2+FruitShapeGumies^2+GumdropsYellow^2+GumdropsOrange^2+GumdropsGreen^2+GumdropsRed^2+GumdropBrownishPurple^2+LEGOBlueRectangle^2+LEGOBlueSquare^2+LEGOGreenRectangle^2+LEGOPinkRectange^2+LEGOPinkSquare^2+LEGOPinkRectange^2+GBTranslucentYellow^2+GBYellow^2+GBOrange^2+GBGreen^2+GBRed^2+GBPink^2+MIOrange^2+MIGreen^2+MIRed^2+MIPik^2+MIYellow^2+MMOrange2^2+MMBlue^2+MMGreen^2+MMRed^2+MMBrown^2+SkittlesGreen2^2+SkittlesOrange2^2+SkittlesRed2^2+SkittlesYellow2^2+SkittlesBrown2^2+RIGOABrown^2+RIGOAOrange^2+RIGOTranslucent^2+RIGOAYellow^2+RIGOAMaroon^2)
+```
+
+
+
+
+##### Richness: Chao1 richness estimator
+Another way to calculate diversity is to estimate the number of species that are present in a sample based on the empirical data to give an upper boundary of the richness of a sample. Here, we use the Chao1 richness estimator. 
+
+$S_{chao1} = S_{obs} + \frac{a^2}{2b})$
+
+$S_{obs}$ = total number of species observed
+a = species observed once
+b = species observed twice or more
+
+So for our previous example community of 3 species with 2, 4, and 1 individuals each, $S_{chao1}$ =
+
+```{r}
+3 + 1^2/(2*2)
+```
+
+* What is the chao1 estimate for your sample?
+
+
+```{r}
+27+4^2/(2*23)
+```
+
+* What is the chao1 estimate for your original total community?
+
+```{r}
+48+9^2/(2*39)
+```
+
+
+#### Part 4: Alpha-diversity functions in R
+We've been doing the above calculations by hand, which is a very good exercise to aid in understanding the math behind these estimates. Not surprisingly, these same calculations can be done with R functions. Since we just have a species table, we will use the `vegan` package. You will need to install this package if you have not done so previously. 
+
+```{r}
+library(vegan)
+
+```
+
+In Project 1, you will also see functions for calculating alpha-diversity in the `phyloseq` package since we will be working with data in that form.
+
+* What are the Simpson Reciprocal Indices for your sample and community using the R function?
+My Sample:
+```{r}
+example_data1=data.frame(
+  number = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27),
+  name = c("Big Balls", "Big Balls", "Big Balls","M&M","M&M","M&M","M&M","M&M","M&M","Skittles","Skittles","Skittles","Skittles","Skittles","Skittles","Mikes & Ike's","Mikes & Ike's","Mikes & Ike's","Mikes & Ike's","Gummy Bears","Gummy Bears","Gummy Bears","Bricks","Bricks","Hershey Kiss","Red Snakes","Chocolate"),
+  characteristics = c("Green", "Brown", "Yellow","Brown","Red","Green","Blue","Orange","Yellow","Brown","Red","Green","Blue","Orange","Yellow","Yellow","Red","Green","Orange","Red","Yellow","Green","Pink","Yellow","None","None","None"),
+  occurences = c(1,1,1,15,8,9,2,17,8,9,10,12,10,7,7,10,4,14,12,9,10,7,2,3,2,1,5)
+)
+
+example_data1 %>% 
+  kable("html") %>%
+  kable_styling(bootstrap_options = "striped", font_size = 10, full_width = F)
+
+
+example_data1_diversity = 
+  example_data1 %>% 
+  select(number, occurences) %>% 
+  spread(number, occurences)
+
+diversity(example_data1_diversity, index="invsimpson")
+
+specpool(example_data1_diversity)
+
+```
+
+My Commmunity:
+```{r}
+example_data2_diversity = 
+  example_data3 %>% 
+  select(number, occurences) %>% 
+  spread(number, occurences)
+example_data2_diversity
+diversity(example_data2_diversity, index="invsimpson")
+specpool(example_data2_diversity)
+```
+
+
+* What are the Simpson Reciprocal Indices for your sample and community using the R function?
+
+My Sample:19.38244
+
+Community:23.62436
+
+* What are the chao1 estimates for your sample and community using the R function?
+
+My Sample:27
+
+Community:48
+
+    + Verify that these values match your previous calculations.
+    
+  The Sample values for Simpson Reciprocal Indices and chao1 estimated matches the previous calculation well. The Community values for Simpson Reciprocal Indices and chao1 estimated do not exactly matched the previous calculation, but are very closed approximation and are only off by a value of 1. 
+
+#### Part 5: Concluding activity
+If you are stuck on some of these final questions, reading the [Kunin et al. 2010](https://www.ncbi.nlm.nih.gov/pubmed/19725865) and [Lundin et al. 2012](https://www.ncbi.nlm.nih.gov/pubmed/23760801) papers may provide helpful insights. 
+
+* How does the measure of diversity depend on the definition of species in your samples?
+
+Measure of diversity is dependent on numbers of species in each sample, therefore, depending on how you define species, types of species and numbers of samples in each species can be different. This in turns gives a different diversity values. 
+
+
+
+* Can you think of alternative ways to cluster or bin your data that might change the observed number of species?
+
+In this set of data, our group has decided to group species accorrding to both texture and colour. So if we decide to group species only according to their textures or colours, numbers and types of species will be different and greatly reduced. Therefore, depending on how we characterize species, we will cluster or bin the data using an entire different sets of values. 
+
+* How might different sequencing technologies influence observed diversity in a sample?
+
+Above examples have presented that diversity can be measured using both Simpson Reciprocal Indices and Chao1 richness estimator, and aboved calculation (From Part 3 and Part 4) has showned how those two measurements are obtained and those two technologies have given different D values.
+

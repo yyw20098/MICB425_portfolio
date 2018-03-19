@@ -1,0 +1,429 @@
+---
+title: 'Module 1'
+author: "YiWei Yang (18422148)"
+date: "version `r format(Sys.time(), '%B %d, %Y')`"
+output: html_document
+---
+
+## Evidence Worksheet for "Prokaryotes: The Unseen Majority"
+
+
+### Learning Objectives
+Describe the numerical abundance of microbial life in relation to ecology and biogeochemistry of Earth systems.
+
+[Whitman *et al* 1998](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/)
+
+### General Questions
+#### What were the main questions being asked?
+Where does majority of prokaryotes exist on earth? How many prokaryotes are there and how much nutrients are contained in prokaryotes?
+
+
+#### What were the primary methodological approaches used?
+Researchers provided estimation of how much prokaryotes are contained in different habits, and use this value to influence how much prokaryotic carbons and other nutrients exist in the entire habitats. Such estimation is provided by calculating numbers of microbes in small sample szie, and use this value to extrapolate to provide estimation of how much microbes exist in the entire population.
+ 
+
+
+#### Summarize the main results or findings. 
+
+1. Prokaryotes contain large amount of N, P, and other essential nutrients.Prokaryotes provide 60-100% of the estimated total carbon in plants, and inclusion of prokaryotic carbon in globe models will almost double estimates of the amount of carbon stored in living organisms. 
+
+2. Prokaryotes exist in wide ranges of habits, including in open ocean, in soil, and in oceanic and terrestrial subsurface, and cellular production rate of all prokaryotes on earth is estimated the highest in the open ocean.
+
+3. The large population size of prokaryotes implies that events that are extremely rare in the laboratory could occur frequently in nature. This means that mutation occurs frequently among prokaryotic population, and this process has given rise to huge diversity of species and allows prokaryotes to adopt into wide variety of environments. 
+
+3. Since prokayotes have high frequency of mutational change,  genes that are widely distributed in prokaryotes have tremendous opportunity for mutational change; Evolution of conserved genes must be otherwise greatly constrained. 
+
+
+#### Do new questions arise from the results?
+
+1. The paper is noted to be pretty old (1998), therefore, perhaps new technologies, methods that have arisen nowadays might able to provide better estimation regarding how much prokaryotes exist in different habitats. We can question such that are estimated numbers of prokaryotes in different habitats still valid? How much have those numbers changed since the study was first being conducted?
+
+2. Researchers have found that prokaryotes' numerical abundance and importance in biogeochemical transformations, but we are lack detailed knowledge of majority of prokaryotic diversity. Therefore, scientists can further investigated diversity of prokaryotes and filled in gaps of knowledge of prokaryotic population. 
+
+
+#### Were there any specific challenges or advantages in understanding the paper (e.g. did the authors provide sufficient background information to understand experimental logic, were methods explained adequately, were any specific assumptions made, were conclusions justified based on the evidence, were the figures or tables useful and easy to understand)? 
+
+1. The paper does not provide comprehensive explanation regarding how mathematics work is conducted to calculate numbers of prokaryotes in different habitats, so we aren't sure about the reliability of values that researchers have provided. The exact methologies used to estimate numbers of prokaryotes in different habitats also aren't clear.
+
+2. Advantages of this research papare are such that a lot of references are provided, and this gives the paper more credibility. Tables, figures, data and evidences are well-presented, and we can clearly compare amount of prokayotes in different habitats using those figurative data. Discussion and conclusion made are also reasonable, based on given evidences provided. 
+
+
+### Problem set 01
+### Learning objectives: 
+Describe the numerical abundance of microbial life in relation to the ecology and biogeochemistry of Earth systems.
+
+[Whitman *et al* 1998](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/)
+
+### Specific Questions:
+####What are the primary prokaryotic habitats on Earth and how do they vary with respect to their capacity to support life? Provide a breakdown of total cell abundance for each primary habitat from the tables provided in the text.  
+
+Primary prokaryotic habitats on Earth including aquatic habitats (contained 12 times 10^28 prokaryotic cells), soil (contained 26 times 10^28 prokaryotic cells), oceanic subsurface (355 times 10^28 prokaryotic cells), and terrestrial subsurface (contained 25-250 times 10^28 prokaryotic cells )
+
+####What is the estimated prokaryotic cell abundance in the upper 200 m of the ocean and what fraction of this biomass is represented by marine cyanobacterium including Prochlorococcus? What is the significance of this ratio with respect to carbon cycling in the ocean and the atmospheric composition of the Earth?  
+
+From global estimates of volume, the upper 200 m of the ocean contains a total of 3.6 times 10^28 cells, of which 2.9 times 10^27 cells are autotrophs. Around 8.05% of the total cell population is considered cyanobacterium. Significant amount of cells in the upper ocean is considered as cyanobacteria, therefore, oceans contribute to great amount of O2 and CO2  production, and this significantly alters atmospheric composition with the rising level of O2 and CO2 produced by cellular respiration. 
+
+
+####What is the difference between an autotroph, heterotroph, and a lithotroph based on information provided in the text?  
+
+Autotrophs: those organisms provide nutrients for themselves via “self-nourishing” processes, that is, they fix inorganic carbon(CO2) into organic carbon for their own usage.
+
+Lithotroph: those organisms use inorganic carbon (CO2) directly as the nutrient sources.
+
+Heterotroph: those organisms use organic carbons as nutrient sources, but unlike autotrophs, they obtained organic carbons from other organisms. 
+
+
+####Based on information provided in the text and your knowledge of geography what is the deepest habitat capable of supporting prokaryotic life? What is the primary limiting factor at this depth? 
+
+20 km-extending from mount Everest, and temperature is the limiting factor at this depth because organisms can only survive in certain temperature.
+
+####Based on information provided in the text your knowledge of geography what is the highest habitat capable of supporting prokaryotic life? What is the primary limiting factor at this height? 
+
+4.5 km depth-extending from Mariana Trench. Primary limiting factor is temperature, such that organisms exist around 125 degree Celsius. 
+
+####Based on estimates of prokaryotic habitat limitation, what is the vertical distance of the Earth’s biosphere measured in km?
+
+24 km- extending all ways from mount Everest to mariana trench. 
+
+####How was annual cellular production of prokaryotes described in Table 7 column four determined? (Provide an example of the calculation)
+
+Equation for annual cell population:
+Population* turnover/year=# cells/year
+
+Example that is provided:
+Marine Heteroph:
+(3.6) times (10^28 cells) times (365 days)/16 turnovers=8.2 times 10^29 cells/year
+=>this equation also equivalent approximately the numbers of accessory metabolic genes that are being produced. 
+
+####What is the relationship between carbon content, carbon assimilation efficiency and turnover rates in the upper 200m of the ocean? Why does this vary with depth in the ocean and between terrestrial and marine habitats?  
+
+Carbon Efficiency=20%
+
+5-20fg C/Cell
+
+~10=10^-30 pg/Cell
+
+(3.6 times 10^28 Cells) times (10^-30 pg/Cell)=0.72Pg C Marine Heterophs 
+
+4 times 0.72=2.88Pg/year
+
+51 Pg C/yr 85% consumed =43 Pg
+
+(43 Pg C/yr)/(2.88 Pg/yr)=14.9
+
+1 turnover Every 24.5 Days
+
+Ocean below 200m contains 8.2*10^28 prokaryotic cells. Since greater numbers of prokaryotes are contained in this area, we are expecting lower days of turnover rates in ocean below 200m. Soil and marine habitats contain less number of population size in comparison with upper 200m of the ocean, so we are expecting higher turnover rates in those two habitats. 
+
+
+####How were the frequency numbers for four simultaneous mutations in shared genes determined for marine heterotrophs and marine autotrophs given an average mutation rate of 4 x 10-7 per DNA replication? (Provide an example of the calculation with units. Hint: cell and generation cancel out)  
+
+4 times 10^-7 mutations/Generation
+
+(4 times 10^-7)^4=2.56 times 10^-26 Mutations/Generation
+
+(3.6 times 10^28 Cells) times 22.8=8.2 times 10^29 cells/yr
+
+365/16=22.8 Turnovers/Year
+
+(8.2 times 10^29 Cells/Yr) times (2.56 times 10^-26 mutations/Generation)=2.1 times 10^4 Mutations/yr
+
+####Given the large population size and high mutation rate of prokaryotic cells, what are the implications with respect to genetic diversity and adaptive potential? Are point mutations the only way in which microbial genomes diversify and adapt?  
+
+  Mutation rate is considered as the major factor giving rise to genetic diversity and vast numbers of new species. With high mutation rate, population is expected to adapt better and survive with an increasing chance, because population tends to evolve new characteristics that enables them to survive better in new environment. 
+  
+  However, point mutations aren’t the only way to acquire genomes diversity, other factor such as transformation, transduction, transposon, phase variation also give rise to genetic diversity and adaptive potential. 
+
+#### What relationships can be inferred between prokaryotic abundance, diversity, and metabolic potential based on the information provided in the text?  
+
+  High mutation rate within the prokaryotic population has given rise to the large population size, however, turnover rate is different, depending on which habitat that prokaryote exists. 
+  
+  The large population size of prokaryotes implies that events (e.g. mutation) that are extremely rare in the laboratory could occur frequently in nature.
+  
+  However, the population size itself is not altogether an accurate measure of the potential for mutational change, which must also include the growth rates of the populations. Large, slowly growing populations may produce fewer cells and fewer mutational events than smaller, rapidly growing populations do. Therefore, those three factors might not be precisely related. 
+
+
+### Evidence Worksheet_02 “Life and the Evolution of Earth’s Atmosphere”
+#### Learning objectives: 
+Comment on the emergence of microbial life and the evolution of Earth systems
+    
+  [*James F. Kasting and Janet L.Siefert*, 2003](https://connect.ubc.ca/webapps/blackboard/execute/content/file?cmd=view&content_id=_4318343_1&course_id=_108463_1) 
+  
+####Indicate the key events in the evolution of Earth systems at each approximate moment in the time series. If times need to be adjusted or added to the timeline to fully account for the development of Earth systems, please do so. 
+
+    + 4.6 billion years ago  
+    
+    500 Degree Celsius
+    
+    Formation of solar system with inner planets being reared
+    
+    increase ration of CO2 : limestone
+    
+    
+    
+    + 4.2 billion years ago  
+    
+    Impacts from meteorite
+    
+    Formation of Zircon as the oldest minerals
+    
+    Moon was formed, and this gave earth spin and tilt, day and night cycles, seasons.
+    
+    Temperature becomes increasingly cool from 100 Degree Celsius
+    
+    Increase rock vapour pressure with the formation of smog
+    
+    
+    
+    + 3.8 billion years ago  
+    
+    Formation of oldest rock as Acata gneiss
+    
+    Evidence of plate subduction
+    
+    Meteorite bombardment has halted and this stabilized sea water chemistry
+    
+    Formation of Rubisco
+    
+    Formation of sedimentart rocks, and this indicates possible existence of life
+    
+    
+    
+    
+    
+    + 3.75 billion years ago  
+    
+    observation of sulphur reduction processing
+    
+    Observation of early form of methanogenesis
+    
+  
+    
+    + 3.5 billion years ago  
+    
+    Emergence of cyanobacteria and this indicates evidence of life via the process photosynthesis
+    
+    
+    
+    
+    + 2.7 billion years ago  
+    
+    Emergence of Eukaryotes
+    
+    Emergence of greenhouse gas CH4 :CO2 with early form of methanogenesis
+    
+    
+    
+    
+    + 1.5 billion years ago
+    
+    Cellular cybenetic switch between mitochondria and chloroplasts, and this may controls link between photosynthesis CO2 and N fixation
+    
+    Rock recognized as Red Beds, and this might be because of oxidization
+    
+    O2 levels increased sharply ->complex Eukaryotes involved is this process
+    
+  
+    
+    + 550,000 years ago
+    
+    O2 levels increased sharply, leading to emergence of micoaerobic early atmosphere, leading to oxic air
+    
+    
+    
+    + 200,000 years ago
+    
+    Expansion of multicellular evolution ->Cambrian explosion
+    
+    Clevonian explosion: emergence of woody, land plants; increased oxygenation of atmosphere; carboniferous period; fish, cephalopods, cerols. 
+    
+    Formation of Pangea -> dry, harsh climate in Pangea’s interior 
+    
+    Permian extinction ~95% of species
+    
+    Rise of dinosaurs
+    
+    Formation of Atlantic Ocean
+    
+    Cretaceous-Tertiary: extinction event
+    
+    Immediately post extinction: nothing over 10 Kg On land
+    
+    Formation of Paleogene
+    
+    Dramatic global warming
+    
+    Mammals diversification
+    
+    Grass starts dominating forest
+    
+    Ice Age
+    
+    Quaternary Period
+    
+    200,000 new species first appears.
+
+
+
+####Describe the dominant physical and chemical characteristics of Earth systems at the following waypoints:  
+
+
+
+    + Hadean  
+    
+    500 Degree Celsius
+    
+    Formation of solar system with inner planets being reared
+    
+    increase ration of CO2 : limestone
+    
+    Impacts from meteorite
+    
+    Formation of Zircon as the oldest minerals
+    
+    Moon was formed, and this gave earth spin and tilt, day and night cycles, seasons.
+    
+    Temperature becomes increasingly cool from 100 Degree Celsius
+    
+    Increase rock vapour pressure with the formation of smog
+    
+    
+    
+    + Archean  
+    
+    Formation of oldest rock as Acata gneiss
+    
+    Evidence of plate subduction
+    
+    Meteorite bombardment has halted and this stabilized sea water chemistry
+    
+    Formation of Rubisco
+    
+    Formation of sedimentart rocks, and this indicates possible existence of life
+    
+    Observation of sulphur reduction processing
+    
+    Observation of early form of methanogenesis
+    
+    Emergence of cyanobacteria and this indicates evidence of life via the process photosynthesis
+    
+    Emergence of Eukaryotes
+    
+    Emergence of greenhouse gas CH4 :CO2 with early form of methanogenesis
+   
+   
+    
+    + Proterozoic  
+    
+    Cellular cybenetic switch between mitochondria and chloroplasts, and this may controls link between photosynthesis CO2 and N fixation
+    
+    Rock recognized as Red Beds, and this might be because of oxidization
+    
+    O2 levels increased sharply ->complex Eukaryotes involved is this process
+    
+    O2 levels increased sharply, leading to emergence of micoaerobic early atmosphere, leading to oxic air
+    
+    
+    
+    + Phanerozoic  
+    
+    Expansion of multicellular evolution ->Cambrian explosion
+    
+    Clevonian explosion: emergence of woody, land plants; increased oxygenation of atmosphere; carboniferous period; fish, cephalopods, cerols. 
+    
+    Formation of Pangea -> dry, harsh climate in Pangea’s interior
+    
+    Permian extinction ~95% of species
+    
+    Rise of dinosaurs
+    
+    Formation of Atlantic Ocean
+    
+    Cretaceous-Tertiary: extinction event
+    
+    Immediately post extinction: nothing over 10 Kg On land
+    
+    Formation of Paleogene
+    
+    Dramatic global warming
+    
+    Mammals diversification
+    
+    Grass starts dominating forest
+    
+    Ice Age
+    
+    Quaternary Period
+    
+    200,000 new species first appears.
+
+
+### Problem set_02 “Microbial Engines”
+### Learning objectives: 
+Discuss the role of microbial diversity and formation of coupled metabolism in driving global biogeochemical cycles.
+
+[*Paul G. Falkowski, et al*](https://connect.ubc.ca/bbcswebdav/pid-4318345-dt-content-rid-22247650_1/courses/SIS.UBC.MICB.425.201.2017W2.94510/2015/Falkowski%20et%20al.%2C%20Science_2008.pdf)
+
+### Specific Questions:
+####What are the primary geophysical and biogeochemical processes that create and sustain conditions for life on Earth? How do abiotic versus biotic processes vary with respect to matter and energy transformation and how are they interconnected?  
+
+
+  On Earth, tectonics and atmospheric photochemical processes continuously supply substrates and remove products, thereby creating geochemical cycles; these two geophysical processes allow elements and molecules to interact with each other, and chemical bonds to form and break in a cyclical manner. 
+  
+  Indeed, unless the creation of bonds forms a cycle, planetary chemistry ultimately will come to thermodynamic equilibrium, which would lead inevitably to a slow depletion of substrates essential for life on the planetary surface. 
+  
+  Most of the H2 in Earth’s mantle escaped to space early in Earth’s history; consequently, the overwhelming majority of the abiotic geochemical reactions are based on acid/base chemistry, i.e., transfers of protons without electrons. The chemistry of life, however, is based on redox reactions, i.e., successive transfers of electrons and protons from a relatively limited set of chemical elements.
+
+
+
+####Why is Earth’s redox state considered an emergent property?
+  
+  On geological time scales, resupply of C, S, and P is dependent on tectonics, especially volcanism and rock weathering.
+  
+   Biogeochemical cycles have evolved on a planetary scale to form a set of abiotically driven acid-base and biologically driven redox reactions that set lower limits on external energy required to sustain the cycles. These reactions fundamentally altered the surface redox state of the planet, and feedbacks between the evolution of microbial metabolic and geochemical processes have breated the average redox condition of the oceans and atmosphere.
+   
+  Hence, Earth’s redox state is an emergent property of microbial life on a planetary scale. Moreover, the biological oxidation of Earth is driven by photosynthesis, which is the only known energy transduction process that is not directly dependent on preformed bond energy. 
+
+####How do reversible electron transfer reactions give rise to element and nutrient cycles at different ecological scales? What strategies do microbes use to overcome thermodynamic barriers to reversible electron flow?  
+
+  In many cases, identical or near-identical pathways may be used for the forward and reverse reactions required to maintain cycles. 
+  
+  If the hydrogen tension is sufficiently low, however, then the reverse process becomes thermodynamically favorable; methane is oxidized anaerobically by Archaea closely related to known, extant methanogens that apparently use co-opted methanogenic machinery in reverse. Low hydrogen tension occurs when there is close spatial association with hydrogen-consuming sulfate reducers; thus, this process requires the synergistic cooperation of multispecies assemblages, a phenomenon that is typical for most biogeochemical transformations.
+  
+  Therefore, reversible electron flow occurs when hydrogen tension has became very low, thus driving such reactions. 
+
+
+####Using information provided in the text, describe how the nitrogen cycle partitions between different redox “niches” and microbial groups. Is there a relationship between the nitrogen cycle and climate change?   
+
+  N2 is a highly inert gas, with an atmospheric residence time of ~1 billion years. 
+  
+  The only biological process that makes N2 accessible for the synthesis of proteins and nucleic acids is nitrogen fixation, a reductive process that transforms N2 to NH4 + . This biologically irreversible reaction is catalyzed by an extremely conserved heterodimeric enzyme complex, nitrogenase, which is inhibited by oxygen. 
+  
+  In the presence of oxygen, NH4 + can be oxidized to nitrate in a two-stage pathway, initially requiring a specific group of Bacteria or Archaea that oxidize ammonia to NO2 − (via hydroxyamine), which is subsequently oxidized to NO3 − by a different suite of nitrifying bacteria.
+  
+  All of the nitrifiers use the small differences in redox potential in the oxidation reactions to reduce CO2 to organic matter (i.e., they are chemoautotrophs). Finally, in the absence of oxygen, a third set of opportunistic microbes uses NO2 − and NO3 − as electron acceptors in the anaerobic oxidation of organic matter. This respiratory pathway ultimately forms N2, thereby closing the N cycle. 
+  
+  Thus, cycle is influenced by photosynthetic production of oxygen and the availability of organic matter. Thus climate change impacts oxygen concentration and availability of organic matter, thus impacted on the nitrogen cycle
+
+####What is the relationship between microbial diversity and metabolic diversity and how does this relate to the discovery of new protein families from microbial community genomes?  
+
+  Metabolic pathways evolved to utilize available substrates produced as end products of other types of microbial metabolism, either by modification of existing metabolic pathways or by using established ones in reverse.
+  
+  The outcome of the coupled metabolic pathways is that on geological time scales, the biosphere can rapidly approach relatively self-sustaining element cycling on time scales of centuries to millennia.
+  
+  In the microbial world, not only individual genes but also entire metabolic pathways central to specific biogeochemical cycles appear to be frequently horizontally transferred; a contemporary analog is the rapid acquisition of antibiotic resistance in pathogenic bacteria.
+  
+  **Therefore, microbial diversity is related to metabolic diversity, and greater microbial diversity and greater likihood of new protein families discovered from microbial community genomes.
+
+####On what basis do the authors consider microbes the guardians of metabolism?  
+
+  Dispersal of the core planetary gene set, whether by vertical or horizontal gene transfer, has allowed a wide variety of organisms to simultaneously, but temporarily, become guardians of metabolism. 
+  
+  Environmental selection on the microbial phenotype leads to evolution of the boutique genes that ultimately protect the metabolic pathway.=> the same selective pressures enabling retention of fundamental redox processes have persisted throughout Earth’s history, sometimes globally, and at other times only in refugia, but able to emerge and exert ubiquitous selection pressure on ancillary genes.
+  
+  Therefore, microbes can be viewed as vessels that ferry metabolic machines through strong environmental perturbations into vast stretches of relatively mundane geological landscapes. The individual taxonomic units evolve and go extinct, yet the core machines survive surprisingly unperturbed
+
+
+
+
+

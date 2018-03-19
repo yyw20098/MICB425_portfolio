@@ -1,0 +1,159 @@
+---
+title: 'Module #2'
+author: "YiWei Yang (18422148)"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: html_document
+---
+
+#Module 2 Remapping the Body of the World
+
+###Evidence worksheet_04 “Bacterial Rhodopsin Gene Expression”
+
+###Learning objectives: 
+
+•	Discuss the relationship between microbial community structure and metabolic diversity
+
+•	Evaluate common methods for studying the diversity of microbial communities
+
+•	Recognize basic design elements in metagenomic workflows
+
+
+[A. Martinez, et al, 2007](https://connect.ubc.ca/bbcswebdav/pid-4318377-dt-content-rid-22247674_1/courses/SIS.UBC.MICB.425.201.2017W2.94510/2015/Martinez%20et%20al.%2C%20PNAS%202007.pdf)
+
+###General Questions:
+
+####What were the main questions being asked?
+
+How to fully characterize PR photosystem structure and function using the metagenomics method, and analyzing the evolutionary relationship between organisms containig PR photosystem using such method?
+
+####What were the primary methodological approaches used?
+
+  We directly screened for large-insert DNA libraries derived from marine picoplankton for visibly detectable PR-expressing phenotype. In this report, we describe that completelly intact PR based photosystems can be functionally expressed in E.coli, without addition of exogenous photopigment. 
+  
+  Also, to obtain direct evidence in regards for the functional annotations of putative retinal biosynthesis genes, we analyzed different transposon mutant phenotypes that carried an insertion in predicted PR photosystem genes. 
+
+
+####Summarize the main results or findings. 
+ 
+ -We have shown that light-activated, PR catalyzed proton translocation, by the chmiosmotic potential it generates, activateds photophosphorylation in E.Coli.
+ 
+ -Results have demonstrated that a single genetic event can result in the acquisition of phototrophic capabilities in an otherwise chemoorganotrophic microorganism, and they explain in part the ubiquity of PR photosystems among diverse microbial taxa.
+ 
+ -Our results support that the functional assignments of PR-associated retinal biosynthetic pathway genes and demonstrate that they are necessary and sufficient to induce retinal biosynthesis in E.coli.
+ 
+ -Genetic and biochemical characterization of PR photosystem containing clones reported here has provided direct evidence that only six genes are required to enable light-activated proton translocation and photophosphorylation fully in a herterologous host.
+ 
+ -PR photosystem-catalyzed phorophosphorylation described here is consistent with a proposed role for PR in marine microbial photoheterotrophy. Moreover, in different physiological, ecological, phylogenetic and genomic contexts, PR activity may benefit cells in a variety of ways, some not directly related to enhanced growth rates or yields. 
+ 
+ -Finally, based on results observed from metagenomic study, we can conclude that the transition from heterotrophy to PR that enabled photoheterotrophy seems to represent a relatively small evolutionary step for contemporary microorganisms. 
+ 
+####Do new questions arise from the results?
+
+Based on results from the study, we can further investigate questions such that how a great diversity of microbes have acquired PR systems. Evolutionary significance of  transition from heterotrophy to RP, and how such evolution occurs and how such transition enabled photoheterotrephy. 
+
+
+####Were there any specific challenges or advantages in understanding the paper (e.g. did the authors provide sufficient background information to understand experimental logic, were methods explained adequately, were any specific assumptions made, were conclusions justified based on the evidence, were the figures or tables useful and easy to understand)? 
+
+  Figures, tables and graphs presented clearly has supported the conclusions drawn. E.g.Figure showing how transposon alter genes sequencing does support the conclusion drawn, and graph has clearly shown that different knockdown  of PR has affected ATP synthesis. 
+  
+  I have some troubles understanding some scientic processes (E.g.different types of proton translocation), and even though the materials and methods section used are clearly presented, I do have difficulties understanding some sectins (E.g.Specific scientific mechanisms of proton-pumping experiments), perhaps because I am lack of some specific scientific knowledge.
+
+
+
+###Problem set_03 “Metagenomics: Genomic Analysis of Microbial Communities”
+### Learning objectives: 
+Specific emphasis should be placed on the process used to find the answer. Be as comprehensive as possible e.g. provide URLs for web sources, literature citations, etc.  
+*(Reminders for how to format links, etc in RMarkdown are in the RMarkdown Cheat Sheets)*
+
+### Specific Questions:
+####How many prokaryotic divisions have been described and how many have no cultured representatives (microbial dark matter)?
+
+  2016 [Small RNA database](http://srnamap.mbc.nctu.edu.tw/):
+  
+  89 bacterial phyla,
+  
+  20 archael phyla
+  
+  But, could be up to 1500 bac. phyla, as there are microbes that live in the "shadow biosphere"
+
+####How many metagenome sequencing projects are currently available in the public domain and what types of environments are they sourced from?
+
+From [EBI databse](https://www.ebi.ac.uk/services):
+110,217 metagenome sequencing projects
+
+Types of environments: many types such as aquatic environment,soil, human guts, sediments, etc. 
+  
+
+####What types of on-line resources are available for warehousing and/or analyzing environmental sequence information (provide names, URLS and applications)?  
+
+Standalone SoftWare: [OTUbase](https://www.bioconductor.org/packages/release/bioc/html/OTUbase.html)
+
+Analysis pipelines: [SLIVA](https://www.arb-silva.de/)
+
+Demoising: [Amplicon Noise](https://omictools.com/ampliconnoise-tool)
+
+Databases: [Ribosomal Database Project (RDP)](http://rdp.cme.msu.edu/)
+
+Assembly: EULIER
+
+Binning: S-GCOM
+
+Annotation: [KEGG](http://www.genome.jp/kegg/)
+
+Analysis pipelines: [Megan 5](http://ab.inf.uni-tuebingen.de/software/megan5/)
+
+####What is the difference between phylogenetic and functional gene anchors and how can they be used in metagenome analysis?   
+
+**Phylogenetic gene anchors**: aligned genes based on evolutionary relationship (e.g. common rRNA sequences).
+
+It analyzes genes that are vertically-transferred. Those genes are taxonomic and usually carry phylogenetic information.
+
+**Functional gene anchors**: aligned genes based on shared functional units (e.g. common metabolic functions such as nitrate metabolism)
+
+Aligned more genes that are horizontally-transferred. We can identify specific biogeochemical functions associated with measurable effects. 
+
+####What is metagenomic sequence binning? What types of algorithmic approaches are used to produce sequence bins? What are some risks and opportunities associated with using sequence bins for metabolic reconstruction of uncultivated microorganisms?  
+
+Metagenomic sequence binning is the process of grouping sequences that come from a single genome.
+
+Two types of algonithms are:
+
+1. Align sequences to database
+
+2. Group to each other based on DNA characteristics: GC content, codon usage.
+
+Risks:
+
+-incomplete coverage of genome sequence
+
+-contamination from different phylogeny
+
+Opportunities:
+
+-Modern binning techniques use both previously available information independent from the sample and intrinsic information present in the sample. Depending on the diversity and complexity of the sample, their degree of success vary: in some cases they can resolve the sequences up to individual species, while in some others the sequences are identified at best with very broad taxonomic groups.
+
+
+####Is there an alternative to metagenomic shotgun sequencing that can be used to access the metabolic potential of uncultivated microorganisms? What are some risks and opportunities associated with this alternative?  
+
+**Functional Screens ( biochemical etc.)**
+
+This method can group uncultivated microorganisms according their shared functions. However, we cannot identify the evolutionary relationship between microorganisms using this method.
+
+**3rd gene sequencing (nanopore)**
+
+This method of DNA sequencing allows large numbers of DNA nanoballs to be sequenced per run and at low reagent costs compared to other high-throughput sequencing platforms. However, only short sequences of DNA are determined from each DNA nanoball which makes mapping the short reads to a reference genome difficult.
+
+**Single cell sequencing**
+
+Advantages:
+
+Fast. Detects 4mC, 5mC, 6mA
+
+Disadvantages:
+
+Moderate throughput. Equipment can be very expensive.
+
+**FISH probe**
+
+It is used to detect and localize the presence or absence of specific DNA sequences on chromosomes. It can also be used to detect and localize specific RNA targets (mRNA, lncRNA and miRNA) in cells, circulating tumor cells, and tissue samples.
+

@@ -321,3 +321,72 @@ In this set of data, our group has decided to group species accorrding to both t
 
 Above examples have presented that diversity can be measured using both Simpson Reciprocal Indices and Chao1 richness estimator, and aboved calculation (From Part 3 and Part 4) has showned how those two measurements are obtained and those two technologies have given different D values.
 
+
+##Evidence WorkSheet_5 "Extensive mosaic structure"
+###Part 1
+
+###Learning Objectives
+*	Evaluate the concept of microbial species based on environmental surveys and cultivation studies.
+* Explain the relationship between microdiversity, genomic diversity and metabolic potential
+* Comment on the forces mediating divergence and cohesion in natural microbial communities
+
+
+[Welch, R. A.et al, 2002](https://www.ncbi.nlm.nih.gov/pubmed/12471157)
+
+###General Questions:
+
+####What were the main questions being asked?
+How does genomes of uropathogenic Escherichia coli compared with each other and what makes each genome distinct?
+
+####What were the primary methodological approaches used?
+ CFT073 (serotype O6:H1:K) was first isolated at the University of Maryland Hospital. Random clones were sequenced by using dye-terminator chemistry and data collected on Applied Biosystems ABI377 and 3700 automated sequencers.
+ 
+ The genome sequence was annotated in the multiuser, web-based annotation environment called MAGPIE. Predicted proteins were searched against the nonredundant database by using BLAST. 
+ 
+ Therefore, the main methologies used are first cloning and sequencing the E.coli isolates, and then sequence analysis the genome sequence using multiuser, web-based annotation environment called MAGPIE. 
+
+
+####Summarize the main results or findings.
+
+-It is found out that genes in most part of E.coli chromosome are newly introduced via numerous, independent horizontal gene-transfer events at many discrete sites, some serving as universal insertion targets used independently in separate lineages. The net result is a mosaic genome structure in which newly acquired genes in each of the E. coli types are placed into a framework made of genes that distinguishes E. coli from its closer relatives such as S. enterica.
+
+-Pathogenicity island concept based on the genetic behavior, virulence gene linkage relationships, and location of unique inserts near several tRNA genes. Evidences found in the study has suggested that extraintestinal E. coli may be oligoclonal despite the apparent linkage relationships of a handful of virulence genes and suggests that the uropathogenic E. coli may be as diverse as the intestinal strains.
+
+-The presence of three extra homologues of the fimBE-like recombinases suggests that the DNA segment-inversion mech- anism of genetic phase variation may operate at regions other than the type I fimbrial adhesin in CFT073. 
+
+-The common core chromosome of the E. coli genomes has been preserved throughout its vertical evolution, with very limited intragenomic rearrangement, resulting in the conserved synteny apparent today. 
+
+####Do new questions arise from the results?
+
+First, this paper has pointed out ambuiguity between species in such we can reconsider how species should be defined and what constitute as a species. 
+
+Deletions that remove genes detrimental to the uropathogenic lifestyle is difficult to assess at this time because of the large number of genetic differences already observed, and additional *E.coli* genome sequences needed for comparisons.Therefore, this might be a question that required further investigations. 
+
+#### Were there any specific challenges or advantages in understanding the paper (e.g. did the authors provide sufficient background information to understand experimental logic, were methods explained adequately, were any specific assumptions made, were conclusions justified based on the evidence, were the figures or tables useful and easy to understand)? 
+
+Figures presented with various genome structure is pretty clear. Pathogenic island containing locations of various genes is also clearly showed. In such that result analyzing using sequence analysis technology is clearly portrayed in the diagram, and location of genes is mapped. 
+
+I am having troubles understanding methologies used to compare genome, condon sequences and relevant genes within the pathogencity island. Perhaps because I am lacking background knowledge regarding function of specific genes, I find difficult following the discussion when the author disscused various genes usage. I am also feeling a bit confused when the author is comparing different types of pathogenicity island. I am able to understand the big picture regarding how pathogenicity island are distributed and contributed to distribution of species, but I have trouble understanding details of specific genes and how those genes are located in specific parts of pathogenicity island, and how those genes contributed to its function
+
+###Part 2
+###Learning Objectives:
+•	Comment on the creative tension between gene loss, duplication and acquisition as it relates to microbial genome evolution
+
+•	Identify common molecular signatures used to infer genomic identity and cohesion
+
+•	Differentiate between mobile elements and different modes of gene transfer
+
+
+####Based on your reading and discussion notes, explain the meaning and content of the following figure derived from the comparative genomic analysis of three E. coli genomes by Welch et al. Remember that CFT073 is a uropathogenic strain and that EDL933 is an enterohemorrhagic strain. Explain how this study relates to your understanding of ecotype diversity. Provide a definition of ecotype in the context of the human body. Explain why certain subsets of genes in CFT073 provide adaptive traits under your ecological model and speculate on their mode of vertical descent or gene transfer.
+
+Different ecotypes of bacteria adapt to different environmental pressures; different species diverges, and adapts to different environment and such divergence is crucial for species survival. Genes transfer are observed between species of bacteria, and in which large genes are difficult to transfer, and small genes can be transferred via horizontal or vertical transformation. 
+
+The figure has showed conservative regions between genes, and regions of difference resulting from horizontal gene transfer or vertical gene transfer. Difference in genes presented (e.g. pap on CET073 ) might contribute to difference in colonization of bacterial species. Pap operons encode for P fimbriae with PapGII adhesins, and are important colonization factor for CET073 and contribute to virulence of this bacteria. 
+
+Therefore, this figure has suggested that each type of E. coli possesses combinations of island genes that confer its characteristic lifestyle or disease-causing traits. Gene evolution has given rise to different ecotypes of E.coli. Within the E.coli species, different ecotypes shared most conservative regions, with small difference in genome allowing E.coli to adapt into different environments. 
+
+
+
+### Module 03 references:
+
+Welch, R. A., Burland, V., Plunkett, G. I. I. I., Redford, P., Roesch, P., Rasko, D., ... & Stroud, D. (2002). Extensive mosaic structure revealed by the complete genome sequence of uropathogenic Escherichia coli. Proceedings of the National Academy of Sciences, 99(26), 17020-17024. [12471157](https://www.ncbi.nlm.nih.gov/pubmed/12471157)

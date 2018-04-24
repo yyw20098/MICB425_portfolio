@@ -157,3 +157,5 @@ Moderate throughput. Equipment can be very expensive.
 
 It is used to detect and localize the presence or absence of specific DNA sequences on chromosomes. It can also be used to detect and localize specific RNA targets (mRNA, lncRNA and miRNA) in cells, circulating tumor cells, and tissue samples.
 
+### Module 02 references
+Martinez, A., Bradley, A. S., Waldbauer, J. R., Summons, R. E., & DeLong, E. F. (2007). Proteorhodopsin photosystem gene expression enables photophosphorylation in a heterologous host. Proceedings of the National Academy of Sciences, 104(13), 5590-5595. [PMC1838496](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1838496/)
